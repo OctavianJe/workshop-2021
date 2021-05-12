@@ -10,11 +10,13 @@ class PaintController : public QObject
 
 public:
 					PaintController(QObject *parent, PaintView* view);
-					~PaintController();
 
 public slots:
-	void			onActionSelect();
-	void			onActionLine();
+	void			onActionSelectTriggered();
+	void			onActionPenTriggered();
+	void			onActionLineTriggered();
+	void			onActionRectangleTriggered();
+	void			onActionEllipseTriggered();
 
 protected slots:
 	void			onMousePress(const QPointF& pos, const Qt::MouseButtons& buttons);
